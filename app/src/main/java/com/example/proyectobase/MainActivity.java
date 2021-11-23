@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import Objetos.Administrador;
@@ -14,6 +17,8 @@ import Objetos.Administrador;
 public class MainActivity extends AppCompatActivity {
     private EditText username, password;
     private TextView msg;
+    private ProgressBar progress;
+    private Button btn;
 
     private Administrador admin = new Administrador();
 
@@ -24,6 +29,45 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.t_username);
         password = findViewById(R.id.t_password);
         msg = findViewById(R.id.tv_error);
+        btn = findViewById(R.id.button);
+        progress = findViewById(R.id.progressBar);
+        progress.setVisibility(View.INVISIBLE);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Acá corre mi tarea asincrona
+                LoadSession(v);
+            }
+        });
+    }
+
+    // Tarea asincrona
+    class Task extends AsyncTask<String, Void, String> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progress.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected String doInBackground(String... strings) {
+             try {
+                 Thread.sleep(1000);
+             } catch (InterruptedException e) {
+                 e.printStackTrace();
+             }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            progress.setVisibility(View.INVISIBLE);
+            Intent i = new Intent(getBaseContext(), Dashboard.class);
+            i.putExtra("address", username.getText().toString().trim());
+            startActivity(i);
+        }
     }
 
     public boolean filledAuth(String user, String pass) {
@@ -47,9 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
     // Cambiar de activity
     public void callback(View view, String user) {
-        Intent i = new Intent(this, Dashboard.class);
-        i.putExtra("address", user);
-        startActivity(i);
+        new Task().execute();
     }
 
     public void Facebook(View view) {

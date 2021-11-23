@@ -6,8 +6,9 @@
         <entry key="app/src/main/res/drawable/background.xml" value="0.2234375" />
         <entry key="app/src/main/res/drawable/card.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/drawable/dark_gradient.xml" value="0.18333333333333332" />
-        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.6244503078276166" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.41254523522316044" />
+        <entry key="app/src/main/res/layout/activity_swap.xml" value="0.40736949846468784" />
       </map>
     </option>
   </component>

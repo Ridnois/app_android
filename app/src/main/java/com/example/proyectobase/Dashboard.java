@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import Objetos.Token;
@@ -30,5 +31,11 @@ public class Dashboard extends AppCompatActivity {
 
         tv_icebalance.setText(iceBalance + " ICE");
         tv_usdbalance.setText( "+" + usdBalance + " USD");
+    }
+
+    public void GoToSwap(View view) {
+        Intent i = new Intent(this, Swap.class);
+        i.putExtra("address", address);
+        startActivity(i);
     }
 }

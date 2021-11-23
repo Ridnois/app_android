@@ -8,7 +8,7 @@ public class Token {
     private int[] ICEBalances = { 1000, 100 };
     private int[] USDBalances = { 10, 20 };
     // each ICE costs 0.1
-    private int icePerUSD = 10;
+    public int icePerUSD = 10;
 
     public int balanceOfICE(String address) {
         int id = Arrays.asList(addresses).indexOf(address);
@@ -39,5 +39,13 @@ public class Token {
 
         USDBalances[id] -= amount;
         ICEBalances[id] += amount * icePerUSD;
+    }
+
+    public int getIcePerUSD() {
+        return icePerUSD;
+    }
+
+    public void setIcePerUSD(int icePerUSD) {
+        this.icePerUSD = icePerUSD;
     }
 }
