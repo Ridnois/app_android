@@ -43,4 +43,16 @@ public class Dashboard_act extends AppCompatActivity {
         i.putExtra("address", address);
         startActivity(i);
     }
+
+    public void GoToSend(View view) {
+        Intent i = new Intent(this, Send_act.class);
+        i.putExtra("address", address);
+        startActivity(i);
+    }
+
+    public void GoToHistory(View view) {
+        Intent i = new Intent(this, History_act.class);
+        i.putExtra("address", address);
+        startActivity(i);
+    }
 }

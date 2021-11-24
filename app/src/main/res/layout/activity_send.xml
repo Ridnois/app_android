@@ -5,24 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Swap_act">
+    tools:context=".Send_act">
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_send"
         android:layout_width="391dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/swaphead"
         app:cardElevation="50dp"
+        android:layout_height="wrap_content"
         app:cardBackgroundColor="#673AB7"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/iv_send"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="4dp"
@@ -30,24 +29,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/lunar_bunny" />
+                app:srcCompat="@drawable/send" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/tv_history"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Swap"
+                android:text="Enviar"
                 android:textColor="#EAE7E7"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintStart_toEndOf="@+id/iv_send"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="393dp"
@@ -56,81 +52,81 @@
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/swaphead"
+        app:layout_constraintTop_toBottomOf="@+id/cv_send"
         app:layout_constraintVertical_bias="0.25">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/tv_swapping"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:text="Swap tokens"
-            android:textColor="#EAE7E7"
-            android:textSize="28sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView3"
+            <TextView
+                android:id="@+id/tv_send"
                 android:layout_width="320dp"
-                android:layout_height="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:textStyle="bold"
+                android:text="Enviar tokens"
+                android:textColor="#EAE7E7"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_sendtoken"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:paddingBottom="12dp"
                 app:cardBackgroundColor="@android:color/transparent"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_swapping">
-
+                app:layout_constraintTop_toBottomOf="@+id/tv_send">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/card">
-
                     <TextView
                         android:textStyle="bold"
-                        android:id="@+id/textView8"
+                        android:id="@+id/tv_sendto"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="48dp"
-                        android:text="From:"
+                        android:layout_marginTop="24dp"
+                        android:text="Enviar a:"
                         android:textColor="#DAE7E7"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
-                    <Spinner
-                        android:id="@+id/spinner"
-                        android:layout_width="280dp"
+                    <EditText
+                        android:id="@+id/et_amount"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:background="#DAE7E7"
-                        android:padding="4dp"
-                        android:theme="@style/SpinnerTheme"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="Amount"
+                        android:layout_marginTop="8dp"
+                        android:ems="10"
                         android:textStyle="bold"
                         android:textColor="#DAE7E7"
                         android:layout_width="280dp"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.504"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
+                        app:layout_constraintTop_toBottomOf="@+id/tv_sendto" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/tv_sendamount"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="cantidad"
+                        android:textColor="#DAE7E7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/et_amount"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
                     <EditText
-                        android:id="@+id/et_amount"
+                        android:id="@+id/et_sendamount"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:ems="10"
@@ -142,39 +138,23 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.504"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
+                        app:layout_constraintTop_toBottomOf="@+id/tv_sendamount" />
                     <Button
-                        android:id="@+id/preview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="36dp"
+                        android:layout_marginTop="8dp"
                         android:backgroundTint="@color/wallet_green"
-                        android:onClick="Preview"
-                        android:text="Preview"
+                        android:text="Enviar"
                         android:textColor="#DAE7E7"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.502"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/et_amount" />
-
-                    <TextView
-                        android:id="@+id/tv_result"
-                        android:layout_height="wrap_content"
-                        android:text="You send x in exchange of y tokens"
-                        android:textStyle="bold"
-                        android:textColor="#DAE7E7"
-                        android:layout_width="280dp"
-                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/et_sendamount"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/preview" />
+                        />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

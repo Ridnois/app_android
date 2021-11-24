@@ -2,8 +2,10 @@ package com.example.proyectobase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -25,4 +27,14 @@ public class Contact_act extends AppCompatActivity {
     }
 
 
+    public void Dial(View view) {
+        Intent i = new Intent(Intent.ACTION_DIAL);
+        i.setData(Uri.parse("tel:957030166"));
+        startActivity(i);
+    }
+
+    public void Map(View view) {
+        Intent i = new Intent(this, MapsActivity.class);
+        startActivity(i);
+    }
 }

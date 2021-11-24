@@ -83,7 +83,7 @@
                 android:layout_marginTop="12dp"
                 android:textColor="#EAE7E7"
                 android:textSize="20dp"
-                android:text="Nuestro objetivo es proveer seguridad y accesibilidad del uso de blockchain a todos los usuarios. Tambien educar a la poblacion acerca de libertad financiera."
+                android:text="Nuestro objetivo es proveer seguridad y accesibilidad del uso de blockchain a todos los usuarios, así ambién educar a la población acerca de libertad financiera."
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_title"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -100,6 +100,7 @@
                 />
 
             <TextView
+                android:id="@+id/tv_contactanos"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:text="Contactanos"
@@ -109,6 +110,64 @@
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/vv_video"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <ImageButton
+                android:id="@+id/ib_map"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="centerCrop"
+                android:onClick="Map"
+                app:layout_constraintEnd_toStartOf="@+id/ib_call"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_contactanos"
+                app:srcCompat="@drawable/location" />
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:scaleType="centerCrop"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:id="@+id/ib_call"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:onClick="Dial"
+                app:layout_constraintStart_toEndOf="@+id/ib_map"
+                app:layout_constraintTop_toBottomOf="@+id/tv_contactanos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/phone"
+                />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ubicación"
+                android:textAlignment="center"
+                android:textColor="#EAE7E7"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:onClick="Map"
+                app:layout_constraintEnd_toStartOf="@id/tv_call"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ib_map" />
+
+            <TextView
+                android:id="@+id/tv_call"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Llamar"
+                android:textAlignment="center"
+                android:textColor="#EAE7E7"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:onClick="Dial"
+                app:layout_constraintStart_toEndOf="@id/tv_location"
+                app:layout_constraintTop_toBottomOf="@id/ib_call"
                 app:layout_constraintEnd_toEndOf="parent"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>

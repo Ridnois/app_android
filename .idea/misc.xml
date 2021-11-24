@@ -8,8 +8,10 @@
         <entry key="app/src/main/res/drawable/dark_gradient.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/layout/activity_contact.xml" value="0.3034188034188034" />
         <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_history.xml" value="0.2259963768115942" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.41254523522316044" />
-        <entry key="app/src/main/res/layout/activity_swap.xml" value="0.40736949846468784" />
+        <entry key="app/src/main/res/layout/activity_send.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_swap.xml" value="0.1" />
       </map>
     </option>
   </component>
