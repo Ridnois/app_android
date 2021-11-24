@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             progress.setVisibility(View.INVISIBLE);
-            Intent i = new Intent(getBaseContext(), Dashboard.class);
+            Intent i = new Intent(getBaseContext(), Dashboard_act.class);
             i.putExtra("address", username.getText().toString().trim());
             startActivity(i);
         }

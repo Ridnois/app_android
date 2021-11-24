@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyectobase">
         <activity
-            android:name=".Swap"
+            android:name=".Contact_act"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name=".Swap_act"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard_act"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

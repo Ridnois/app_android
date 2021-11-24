@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".Dashboard">
+    tools:context=".Dashboard_act">
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="391dp"
@@ -66,7 +66,9 @@
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="44dp"
-                android:text="Hello, Developer!"
+                android:textStyle="bold"
+
+                android:text="Hola, Developer!"
                 android:textColor="#EAE7E7"
                 android:textSize="28sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -159,7 +161,8 @@
                         android:layout_width="320dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="Manage"
+                        android:text="Gestionar"
+                        android:textStyle="bold"
                         android:textColor="#EAE7E7"
                         android:textSize="28sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -193,9 +196,10 @@
                         android:layout_height="80dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="16dp"
+                        android:onClick="GoToContact"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_greeting3"
-                        app:srcCompat="@drawable/nft" />
+                        app:srcCompat="@drawable/contact_dogs" />
 
                     <TextView
                         android:textAlignment="center"
@@ -207,7 +211,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="12dp"
-                        android:text="Send ICE"
+                        android:text="Envía ICE"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -217,7 +221,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="History"
+                        android:text="Historial"
                         android:textColor="#EAE7E7"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -232,10 +236,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="16dp"
-                        android:text="Buy NFT"
+                        android:text="Contacto"
                         android:textColor="#EAE7E7"
                         android:textSize="20sp"
                         android:textStyle="bold"
+                        android:onClick="GoToContact"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
