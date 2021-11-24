@@ -3,9 +3,12 @@ package com.example.proyectobase;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.proyectobase.database.AdminSQLiteOpenHelper;
 
 import Objetos.Token;
 
@@ -31,6 +34,7 @@ public class Dashboard_act extends AppCompatActivity {
 
         tv_icebalance.setText(iceBalance + " ICE");
         tv_usdbalance.setText( "+" + usdBalance + " USD");
+
     }
 
     public void GoToContact(View view) {

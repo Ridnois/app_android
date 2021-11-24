@@ -14,6 +14,8 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE transacciones(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, sender text, receiver text, amount int)");
+        db.execSQL("CREATE TABLE balances(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, address text, icebalance int, usdbalance int)");
+        db.execSQL("INSERT INTO balances (address, icebalance, usdbalance) VALUES ('Sebastian', 666, 420)");
     }
 
     @Override

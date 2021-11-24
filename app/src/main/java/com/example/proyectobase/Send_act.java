@@ -28,7 +28,7 @@ public class Send_act extends AppCompatActivity {
     }
 
     public void transfer(String from, String to, int amount) {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "icecream", null, 1);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "icecream", null, 2);
         SQLiteDatabase db = admin.getWritableDatabase();
 
         ContentValues cont = new ContentValues();
@@ -38,6 +38,8 @@ public class Send_act extends AppCompatActivity {
         db.insert("transacciones", null, cont);
         et_sendto.setText("");
         et_sendamount.setText("");
+
+        tv_senderror.setText(amount +" Ice enviado exitosamente!");
     }
     public void Send(View view) {
         try {
@@ -47,7 +49,7 @@ public class Send_act extends AppCompatActivity {
             transfer(address, to, amount);
 
         } catch (Exception e) {
-            tv_senderror.setText(e.toString());
+            tv_senderror.setText("Debes ingresar un valor");
         }
     }
 }

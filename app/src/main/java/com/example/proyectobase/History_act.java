@@ -36,7 +36,7 @@ public class History_act extends AppCompatActivity {
     public void Show(View view) {
         try {
 
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "icecream", null, 1);
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "icecream", null, 2);
             SQLiteDatabase db = admin.getWritableDatabase();
             Cursor file = db.rawQuery("SELECT * FROM transacciones", null);
 
