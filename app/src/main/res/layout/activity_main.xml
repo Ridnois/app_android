@@ -127,6 +127,7 @@
                 android:text="salir"
                 android:textColor="@color/wallet_cyan"
                 android:textSize="18sp"
+                android:onClick="Salir"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button" />

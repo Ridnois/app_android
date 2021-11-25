@@ -10,20 +10,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.proyectobase.database.AdminSQLiteOpenHelper;
-
-import org.w3c.dom.Text;
 
 public class History_act extends AppCompatActivity {
     private String address;
     private LinearLayout ll_transacciones;
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
@@ -42,6 +36,7 @@ public class History_act extends AppCompatActivity {
 
             if(file.moveToFirst()) {
                 while(file.moveToNext()) {
+                    ll_transacciones.removeAllViews();
                     TextView item = new TextView(History_act.this);
                     String from = file.getString(1);
                     String to = file.getString(2);

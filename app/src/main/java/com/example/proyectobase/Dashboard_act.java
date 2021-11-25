@@ -3,6 +3,7 @@ package com.example.proyectobase;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -10,11 +11,8 @@ import android.widget.TextView;
 
 import com.example.proyectobase.database.AdminSQLiteOpenHelper;
 
-import Objetos.Token;
-
 public class Dashboard_act extends AppCompatActivity {
     private TextView tv_greeting, tv_icebalance, tv_usdbalance;
-    private Token token = new Token();
     private String address;
     private int usdBalance, iceBalance;
 
@@ -29,12 +27,20 @@ public class Dashboard_act extends AppCompatActivity {
         address = ad.getStringExtra("address");
         tv_greeting.setText("Hola, " + address + "!");
 
-        usdBalance = token.balanceOfUSD(address);
-        iceBalance = token.balanceOfICE(address);
+
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "icecream", null, 2 );
+        SQLiteDatabase db = admin.getWritableDatabase();
+
+        Cursor file = db.rawQuery("SELECT * FROM balances", null);
+
+        if(file.moveToFirst()) {
+            usdBalance = file.getInt(2);
+            iceBalance = file.getInt(3);
+            file.close();
+        }
 
         tv_icebalance.setText(iceBalance + " ICE");
         tv_usdbalance.setText( "+" + usdBalance + " USD");
-
     }
 
     public void GoToContact(View view) {

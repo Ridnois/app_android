@@ -111,4 +111,8 @@ public class MainActivity extends AppCompatActivity {
         i.setData(Uri.parse("https://twitter.com"));
         startActivity(i);
     }
+
+    public void Salir(View view) {
+        this.finishAffinity();
+    }
 }
