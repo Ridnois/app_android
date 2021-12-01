@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="HeaderCard">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="cardElevation">50dp</item>
+        <item name="cardBackgroundColor">#673AB7</item>
+        <item name="cardCornerRadius">16dp</item>
 
-    <style name="log">
+    </style>
+    <style name="InputField">
         <item name="android:layout_width">320dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">20dp</item>
@@ -14,6 +21,26 @@
         <item name="android:textSize">24sp</item>
         <item name="android:radius">8dp</item>
     </style>
+    <style name="HeaderImage">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+    </style>
+    <style name="HeaderTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#EAE7E7</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ContentHeader">
+        <item name="android:layout_width">320dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">44dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#EAE7E7</item>
+        <item name="android:textSize">28sp</item>
+    </style>
     <style name="Transaction">
         <item name="android:textColor">#DAE7E7</item>
         <item name="android:textSize">18sp</item>
@@ -24,4 +51,44 @@
         <item name="android:textStyle">bold</item>
         <item name="android:ems">10</item>
     </style>
+    <style name="ActionCard">
+        <item name="android:layout_width">320dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">50dp</item>
+    </style>
+    <style name="ActionCard.view">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:textColor">#DAE7E7</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ActionCard.TextField">
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#C8DDDD</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="ImageGoTo">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+    <style name="ViewGoTo">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#EAE7E7</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>

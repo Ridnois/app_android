@@ -7,12 +7,8 @@
     android:background="@drawable/background"
     tools:context=".Swap_act">
     <androidx.cardview.widget.CardView
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
         android:id="@+id/swaphead"
-        app:cardElevation="50dp"
-        app:cardBackgroundColor="#673AB7"
-        app:cardCornerRadius="10dp"
+        style="@style/HeaderCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,23 +19,16 @@
 
             <ImageView
                 android:id="@+id/imageView10"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="4dp"
+                style="@style/HeaderImage"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/lunar_bunny" />
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Swap"
-                android:textColor="#EAE7E7"
-                android:textSize="36sp"
-                android:textStyle="bold"
+                style="@style/HeaderTitle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView10"
@@ -64,24 +53,16 @@
 
         <TextView
             android:id="@+id/tv_swapping"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
             android:text="Swap tokens"
-            android:textColor="#EAE7E7"
-            android:textSize="28sp"
+            style="@style/ContentHeader"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView3"
-                android:layout_width="320dp"
-                android:layout_height="400dp"
+                style="@style/ActionCard"
                 android:layout_marginTop="24dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="50dp"
+                android:layout_height="400dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_swapping">
@@ -92,20 +73,16 @@
                     android:background="@drawable/card">
 
                     <TextView
-                        android:textStyle="bold"
                         android:id="@+id/textView8"
-                        android:layout_width="280dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="48dp"
-                        android:text="From:"
-                        android:textColor="#DAE7E7"
-                        android:textSize="18sp"
+                        android:text="Desde (escoge Token)"
+                        style="@style/ActionCard.view"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Spinner
                         android:id="@+id/spinner"
+                        style="@style/InputField"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -118,27 +95,18 @@
 
                     <TextView
                         android:id="@+id/textView9"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
                         android:text="Amount"
-                        android:textStyle="bold"
-                        android:textColor="#DAE7E7"
-                        android:layout_width="280dp"
-                        android:textSize="18sp"
+                        style="@style/ActionCard.view"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
                     <EditText
                         android:id="@+id/et_amount"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:ems="10"
                         android:inputType="number"
-                        android:textStyle="bold"
-                        android:textColor="#DAE7E7"
+                        style="@style/InputField"
                         android:layout_width="280dp"
-                        android:textSize="18sp"
+                        android:background="@android:color/transparent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.504"
                         app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +140,6 @@
                         android:onClick="Swap"
                         android:text="Intercambiar"
                         android:textColor="#DAE7E7"
-
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"

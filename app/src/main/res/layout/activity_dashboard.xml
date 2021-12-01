@@ -23,9 +23,7 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="4dp"
+                style="@style/HeaderImage"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -34,12 +32,8 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Dashboard"
-                android:textColor="#EAE7E7"
-                android:textSize="36sp"
-                android:textStyle="bold"
+                style="@style/HeaderTitle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -63,13 +57,7 @@
 
             <TextView
                 android:id="@+id/tv_greeting"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="44dp"
-                android:textStyle="bold"
-                android:textColor="#EAE7E7"
-                android:textSize="28sp"
-                android:text="Hola, Developer!"
+                style="@style/ContentHeader"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
@@ -77,12 +65,9 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView3"
-                android:layout_width="320dp"
+                style="@style/ActionCard"
                 android:layout_height="200dp"
                 android:layout_marginTop="24dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_greeting">
@@ -157,24 +142,17 @@
 
                     <TextView
                         android:id="@+id/tv_greeting3"
-                        android:layout_width="320dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        style="@style/ContentHeader"
                         android:text="Gestionar"
-                        android:textStyle="bold"
-                        android:textColor="#EAE7E7"
-                        android:textSize="28sp"
+                        android:layout_marginTop="8dp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        style="@style/ImageGoTo"
                         android:layout_marginStart="16dp"
-                        android:layout_marginTop="20dp"
                         android:onClick="GoToSend"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_greeting3"
@@ -182,9 +160,7 @@
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginTop="20dp"
+                        style="@style/ImageGoTo"
                         android:layout_marginEnd="120dp"
                         android:onClick="GoToHistory"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -193,9 +169,7 @@
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginTop="20dp"
+                        style="@style/ImageGoTo"
                         android:layout_marginEnd="16dp"
                         android:onClick="GoToContact"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -203,46 +177,28 @@
                         app:srcCompat="@drawable/contact_dogs" />
 
                     <TextView
-                        android:textAlignment="center"
-                        android:textColor="#EAE7E7"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
                         android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="12dp"
                         android:text="Envía ICE"
+                        style="@style/ViewGoTo"
+                        android:layout_marginStart="16dp"
                         android:onClick="GoToSend"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
                     <TextView
-                        android:textAlignment="center"
                         android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
                         android:text="Historial"
-                        android:textColor="#EAE7E7"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
+                        style="@style/ViewGoTo"
                         android:onClick="GoToHistory"
                         app:layout_constraintEnd_toStartOf="@+id/textView7"
                         app:layout_constraintStart_toEndOf="@+id/textView4"
                         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
                     <TextView
-                        android:textAlignment="center"
                         android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="16dp"
                         android:text="Contacto"
-                        android:textColor="#EAE7E7"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
+                        style="@style/ViewGoTo"
+                        android:layout_marginEnd="16dp"
                         android:onClick="GoToContact"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView5" />

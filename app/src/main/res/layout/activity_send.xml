@@ -8,11 +8,7 @@
     tools:context=".Send_act">
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_send"
-        android:layout_width="391dp"
-        app:cardElevation="50dp"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="#673AB7"
-        app:cardCornerRadius="10dp"
+        style="@style/HeaderCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,9 +18,8 @@
 
             <ImageView
                 android:id="@+id/iv_send"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="4dp"
+                style="@style/HeaderImage"
+                android:contentDescription="Send logo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -33,12 +28,8 @@
 
             <TextView
                 android:id="@+id/tv_history"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Enviar"
-                android:textColor="#EAE7E7"
-                android:textSize="36sp"
-                android:textStyle="bold"
+                style="@style/HeaderTitle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_send"
@@ -73,13 +64,9 @@
                 app:layout_constraintTop_toTopOf="parent" />
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_sendtoken"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:paddingBottom="12dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="50dp"
+                style="@style/ActionCard"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_send">
@@ -88,71 +75,56 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/card">
                     <TextView
-                        android:textStyle="bold"
                         android:id="@+id/tv_sendto"
-                        android:layout_width="280dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
                         android:text="Enviar a:"
-                        android:textColor="#DAE7E7"
-                        android:textSize="18sp"
+                        style="@style/ActionCard.view"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
                     <EditText
                         android:id="@+id/et_sendto"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:ems="10"
-                        android:textStyle="bold"
-                        android:textColor="#DAE7E7"
-                        android:layout_width="280dp"
-                        android:textSize="18sp"
+                        style="@style/ActionCard.TextField"
+                        android:hint="Dirección a enviar"
+                        android:minHeight="48dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.504"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_sendto" />
                     <TextView
-                        android:textStyle="bold"
                         android:id="@+id/tv_sendamount"
-                        android:layout_width="280dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
                         android:text="cantidad"
-                        android:textColor="#DAE7E7"
-                        android:textSize="18sp"
+                        style="@style/ActionCard.view"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/et_sendto"
                         app:layout_constraintEnd_toEndOf="parent"
                         />
+
                     <EditText
                         android:id="@+id/et_sendamount"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:ems="10"
+                        style="@style/ActionCard.TextField"
+                        android:hint="Eg: 10"
                         android:inputType="number"
-                        android:textStyle="bold"
-                        android:textColor="#DAE7E7"
-                        android:layout_width="280dp"
-                        android:textSize="18sp"
+                        android:minHeight="48dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.504"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_sendamount" />
+
                     <Button
+                        android:id="@+id/btn_send"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="16dp"
                         android:backgroundTint="@color/wallet_green"
+                        android:onClick="Send"
                         android:text="Enviar"
                         android:textColor="#DAE7E7"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:onClick="Send"
-                        android:id="@+id/btn_send"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/et_sendamount"
-                        app:layout_constraintEnd_toEndOf="parent"
 
                         />
                     <TextView

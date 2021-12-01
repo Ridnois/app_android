@@ -70,7 +70,7 @@
 
             <EditText
                 android:id="@+id/t_username"
-                style="@style/log"
+                style="@style/InputField"
                 android:layout_width="348dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="18dp"
@@ -94,7 +94,7 @@
 
             <EditText
                 android:id="@+id/t_password"
-                style="@style/log"
+                style="@style/InputField"
                 android:layout_width="346dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="14dp"

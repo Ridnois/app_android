@@ -7,10 +7,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.MediaController;
+import android.widget.RatingBar;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 public class Contact_act extends AppCompatActivity {
     private VideoView vv_video;
+    private RatingBar rb_rate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +26,16 @@ public class Contact_act extends AppCompatActivity {
 
         MediaController media = new MediaController(this);
         vv_video.setMediaController(media);
-
+        rb_rate = findViewById(R.id.ratingBar);
+        // edited here
+        rb_rate.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean b) {
+                Toast.makeText(getBaseContext(), "Gracias por calificarnos!", Toast.LENGTH_SHORT).show();
+                ratingBar.setVisibility(View.INVISIBLE);
+            }
+        });
     }
-
 
     public void Dial(View view) {
         Intent i = new Intent(Intent.ACTION_DIAL);
