@@ -26,21 +26,29 @@ public class Dashboard_act extends AppCompatActivity {
         Intent ad = getIntent();
         address = ad.getStringExtra("address");
         tv_greeting.setText("Hola, " + address + "!");
+        refresh();
+    }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        this.refresh();
+    }
 
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "icecream", null, 2 );
-        SQLiteDatabase db = admin.getWritableDatabase();
-
-        Cursor file = db.rawQuery("SELECT * FROM balances", null);
-
-        if(file.moveToFirst()) {
-            usdBalance = file.getInt(2);
-            iceBalance = file.getInt(3);
-            file.close();
+    public void refresh() {
+        try {
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "icecream", null, 2 );
+            SQLiteDatabase db = admin.getWritableDatabase();
+            Cursor file = db.rawQuery("SELECT * FROM balances WHERE address = '" + address + "'",null);
+            if(file.moveToFirst()) {
+                iceBalance = file.getInt(2);
+                usdBalance = file.getInt(3);
+            }
+            tv_icebalance.setText(iceBalance + " ICE");
+            tv_usdbalance.setText( "+" + usdBalance + " USD");
+        } catch(Exception e) {
+            //
         }
-
-        tv_icebalance.setText(iceBalance + " ICE");
-        tv_usdbalance.setText( "+" + usdBalance + " USD");
     }
 
     public void GoToContact(View view) {

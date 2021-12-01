@@ -47,31 +47,71 @@
 
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/btn_history"
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:id="@+id/tv_registros"
+        android:text="Registros"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:onClick="Show"
-        android:text="Refresh"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:textColor="#EAE7E7"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cv_history" />
+        app:layout_constraintTop_toBottomOf="@+id/cv_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
-    <ScrollView
-        android:layout_width="384dp"
-        android:layout_height="600dp"
-        android:layout_marginTop="34dp"
+    <ListView
+        android:id="@+id/lv_transacciones"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        android:background="#EAE7E7"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_registros"
+        tools:ignore="MissingConstraints"></ListView>
+    <LinearLayout
+
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_transacciones"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_history"
-        tools:ignore="SpeakableTextPresentCheck">
-
-        <LinearLayout
-            android:id="@+id/ll_transacciones"
-            android:layout_width="match_parent"
+        android:layout_marginTop="28dp"
+        >
+        <Button
+            android:id="@+id/btn_delete"
+            android:text="Delete"
+            android:onClick="Delete"
             android:layout_height="wrap_content"
-            android:orientation="vertical"></LinearLayout>
-    </ScrollView>
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/wallet_green"
+            android:textColor="#DAE7E7"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="30dp"
+
+            />
+        <Button
+            android:id="@+id/btn_refreshhistory"
+            android:text="Refresh"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#DAE7E7"
+            android:textSize="20sp"
+            android:layout_marginStart="30dp"
+            android:backgroundTint="@android:color/transparent"
+            android:textStyle="bold"
+            android:stateListAnimator="@null"
+            android:onClick="Show"
+                />
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
